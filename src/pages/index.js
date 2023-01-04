@@ -13,12 +13,6 @@ export default function Home() {
     variables: { page: currentPage, posterUrlSize: "W780", backdropUrlSize: "W780", }
   });
 
-  const loadPageHandler = (page) => () =>{
-    setCurrentPage(() => {
-      return page;
-    })
-  };
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
 
@@ -29,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <ul className={styles.grid}>
+      <ul data-testid="movie-listing" className={styles.grid}>
         {data?.popular?.results?.map((movie) => {
           return (
 
@@ -54,7 +48,6 @@ export default function Home() {
 
       <Pagination
         currentPage={ currentPage }
-        // totalPage={ data?.popular?.total_pages }
         onPageChange={ (page) => setCurrentPage(page) }
       />
     </>

@@ -36,6 +36,7 @@ const Pagination = ({
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
+      data-testid="pagination"
       className={classnames(styles.pagination__container, { [className]: className })}
     >
       <li

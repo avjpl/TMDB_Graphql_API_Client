@@ -34,8 +34,6 @@ export const usePagination = ({
       totalPageCount
     );
 
-    console.log('sibling', {leftSiblingIndex, rightSiblingIndex});
-
     /*
       We do not want to show dots if there is only one position left
       after/before the left/right page count as that would lead to a change if our Pagination
