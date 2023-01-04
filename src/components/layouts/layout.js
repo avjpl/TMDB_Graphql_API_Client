@@ -11,7 +11,7 @@ const links = {
   popular: '/popular',
   latest: '/latest',
   topRated: '/topRated',
-  search: '/search'
+  search: '/search',
 };
 
 const socialLink = {
@@ -36,15 +36,21 @@ const Layout = ({ children }) => {
       </Head>
 
       <header>
-        <Link href='/' className={css.title}>Movies</Link>
+        <Link href='/' className={css.title}>
+          Movies
+        </Link>
 
         <nav>
           <ul className={css.nav}>
             {Object.entries(links).map(([linkLabel, linkTo]) => (
-              <Link key={linkLabel} href={linkTo} className={classnames(css.nav__link, {
-                [css['nav__link--active']]: currentRoute === linkTo,
-              })}>
-                  {linkLabel}
+              <Link
+                key={linkLabel}
+                href={linkTo}
+                className={classnames(css.nav__link, {
+                  [css['nav__link--active']]: currentRoute === linkTo,
+                })}
+              >
+                {linkLabel}
               </Link>
             ))}
           </ul>

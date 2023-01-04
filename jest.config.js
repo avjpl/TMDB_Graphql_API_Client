@@ -8,9 +8,21 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 /** @type {import('jest').Config} */
 const customJestConfig = {
+  // Indicates whether the coverage information should be collected while executing the test
+  // collectCoverage: true,
+
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  // collectCoverageFrom: [
+  //   '!**/__tests__/**',
+  //   'src/**/*.{js}',
+  //   '!**/node_modules/**',
+  // ],
+
+  // The directory where Jest should output its coverage files
+  // coverageDirectory: 'coverage',
+
   // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  // setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.js'],
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   moduleDirectories: ['node_modules', '<rootDir>/', '<rootDir>/config/jest'],
   testEnvironment: 'jest-environment-jsdom',

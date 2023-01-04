@@ -1,7 +1,11 @@
 import { gql } from '@apollo/client';
 
 export const GET_POPULAR = gql`
-  query getPopular($page: Int, $posterUrlSize: PosterSizes, $backdropUrlSize: BackdropSizes) {
+  query getPopular(
+    $page: Int
+    $posterUrlSize: PosterSizes
+    $backdropUrlSize: BackdropSizes
+  ) {
     popular(page: $page) {
       page
       results {

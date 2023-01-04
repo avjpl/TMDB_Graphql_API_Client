@@ -1,12 +1,12 @@
-import { GET_POPULAR } from "../../../src/apollo/queries";
+import { GET_POPULAR } from '../../../src/apollo/queries';
 
 export const singleMovie = {
   request: {
     query: GET_POPULAR,
     variables: {
       page: 1,
-      posterUrlSize: "W780",
-      backdropUrlSize: "W780",
+      posterUrlSize: 'W780',
+      backdropUrlSize: 'W780',
     },
   },
   result: {
@@ -23,7 +23,7 @@ export const singleMovie = {
         ],
         total_pages: 10,
         total_results: 10,
-      }
-    }
-  }
+      },
+    },
+  },
 };

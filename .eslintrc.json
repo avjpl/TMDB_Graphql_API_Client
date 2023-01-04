@@ -1,6 +1,18 @@
 {
   "root": true,
-  "extends": "next/core-web-vitals",
+  "env": {
+    "node": false,
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "eslint-config-prettier"
+  ],
   "plugins": ["testing-library"],
   "overrides": [
     // Only uses Testing Library lint rules in test files
@@ -11,5 +23,15 @@
       ],
       "extends": ["plugin:testing-library/react"]
     }
-  ]
+  ],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
 }

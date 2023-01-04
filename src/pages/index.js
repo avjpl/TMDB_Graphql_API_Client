@@ -1,16 +1,21 @@
-import {useState} from "react";
+import { useState } from 'react';
 import Head from 'next/head';
-import Image from'next/image';
+import Image from 'next/image';
+import { useQuery } from '@apollo/client';
 
-import { useQuery } from "@apollo/client";
 import { Pagination } from '../components';
 import { GET_POPULAR } from '../apollo/queries/index';
+
 import styles from '../../static/styles/home.module.css';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const { data, error, loading } = useQuery(GET_POPULAR, {
-    variables: { page: currentPage, posterUrlSize: "W780", backdropUrlSize: "W780", }
+    variables: {
+      page: currentPage,
+      posterUrlSize: 'W780',
+      backdropUrlSize: 'W780',
+    },
   });
 
   if (loading) return <p>Loading...</p>;
@@ -20,24 +25,23 @@ export default function Home() {
     <>
       <Head>
         <title>Create Next App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <ul data-testid="movie-listing" className={styles.grid}>
+      <ul data-testid='movie-listing' className={styles.grid}>
         {data?.popular?.results?.map((movie) => {
           return (
-
             <li className={styles.grid__item} key={movie.id}>
               <Image
                 priority
                 src={movie.poster_url}
                 fill
-                sizes="
+                sizes='
                   (max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   33vw
-                "
-                alt=""
+                '
+                alt=''
               />
               <span className={styles.vote__average}>{movie.vote_average}</span>
             </li>
@@ -45,11 +49,10 @@ export default function Home() {
         })}
       </ul>
 
-
       <Pagination
-        currentPage={ currentPage }
-        onPageChange={ (page) => setCurrentPage(page) }
+        currentPage={currentPage}
+        onPageChange={(page) => setCurrentPage(page)}
       />
     </>
-  )
+  );
 }

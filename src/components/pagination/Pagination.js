@@ -11,7 +11,7 @@ const Pagination = ({
   currentPage,
   pageSize,
   totalPage = 500,
-  className
+  className,
 }) => {
   const paginationRange = usePagination({
     currentPage,
@@ -36,12 +36,14 @@ const Pagination = ({
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
-      data-testid="pagination"
-      className={classnames(styles.pagination__container, { [className]: className })}
+      data-testid='pagination'
+      className={classnames(styles.pagination__container, {
+        [className]: className,
+      })}
     >
       <li
         className={classnames(styles.pagination__item, {
-          disabled: currentPage === 1
+          disabled: currentPage === 1,
         })}
         onClick={onPrevious}
       >
@@ -49,14 +51,21 @@ const Pagination = ({
       </li>
       {paginationRange.map((pageNumber, idx) => {
         if (pageNumber === DOTS) {
-          return <li key={`${pageNumber}${idx}--dot`}  className={`${styles.pagination__item} ${styles.pagination__dots}`}>&#8230;</li>;
+          return (
+            <li
+              key={`${pageNumber}${idx}--dot`}
+              className={`${styles.pagination__item} ${styles.pagination__dots}`}
+            >
+              &#8230;
+            </li>
+          );
         }
 
         return (
           <li
             key={`${pageNumber}${idx}`}
             className={classnames(styles.pagination__item, {
-              [styles.pagination__selected]: pageNumber === currentPage
+              [styles.pagination__selected]: pageNumber === currentPage,
             })}
             onClick={() => onPageChange(pageNumber)}
           >
@@ -66,7 +75,7 @@ const Pagination = ({
       })}
       <li
         className={classnames(styles.pagination__item, {
-          disabled: currentPage === lastPage
+          disabled: currentPage === lastPage,
         })}
         onClick={onNext}
       >
