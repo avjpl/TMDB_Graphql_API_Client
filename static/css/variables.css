@@ -1,0 +1,78 @@
+
+
+:root {
+  /*custom media queries not working*/
+  /*@custom-media --media-s screen and (min-width: 32em); !* 32 * 16 = 512 *!*/
+  /*@custom-media --media-m screen and (min-width: 40em); !* 40 * 16 = 640 *!*/
+  /*@custom-media --media-l screen and (min-width: 52em); !* 52 * 16 = 832 *!*/
+  /*@custom-media --media-xl screen and (min-width: 64em); !* 64 * 16 = 1024 *!*/
+
+  --spacer10: 10px;
+  --spacer20: 20px;
+
+  /* colours */
+  --white: #fff;
+  --black: #000;
+  --off-white: #f0f0f0;
+  --gray: #131313;
+  --light-gray: #959595;
+  --dark-gray: #222222;
+  /*
+    #f6f6f6
+    #959595
+    #939393
+  */
+
+  /**/
+  --bgColor: var(--black);
+  --containerBgColour: var(--gray);
+
+  /* fonts */
+  --effra: effraRegular;
+  --effra-light: effraLight;
+  --clearSans: ClearSans;
+  --ClearSans-light: ClearSansLight;
+  --proximanova-light: proximanovaLight;
+
+  --space4: 0.25rem; /* 4px */
+  --space8: 0.5rem; /* 8px */
+  --space10: 0.625em; /* 10px */
+  --space12: 0.75rem; /* 12px */
+  --space16: 1rem; /* 16px */
+  --space20: 1.25rem; /* 20px */
+  --space24: 1.5rem; /* 24px */
+  --space28: 1.75rem; /* 28px */
+  --space32: 2rem; /* 32px */
+  --space36: 2.25rem; /* 36px */
+  --space40: 2.5rem; /* 40px */
+  --space50: 3.125rem; /* 50px */
+
+  --fr1: 1fr;
+  --fr2: 2fr;
+  --fr3: 3fr;
+  --fr4: 4fr;
+  --fr5: 5fr;
+
+  --max-width-xs: 25rem; /* 400px */
+  --max-width-s: 42rem; /* 672px */
+  --max-width-m: 56.5625rem; /* 905px */
+  --max-width-l: 64rem; /* 1024 */
+  --max-width-xl: 90rem; /* 1440px */
+
+  --min-width-field: 16em; /* 256px */
+
+  --font-stack: effraRegular, Helvetica, Arial, sans-serif;
+
+  --font-size-xxs: 0.625rem; /* 10px */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-s: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-m: 1.125rem; /* 18px */
+  --font-size-l: 1.5rem; /* 24px */
+  --font-size-xl: 2rem; /*32px */
+  --font-size-xxl: 2.5rem; /* 40px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+}

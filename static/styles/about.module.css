@@ -1,0 +1,26 @@
+.about {
+    display: grid;
+    grid-template-columns: 255px minmax(600px, 1100px);
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 0.9rem;
+    line-height: 130%;
+}
+
+.about__image {
+    grid-row: 2 / 3;
+    position: relative;
+    width: 255px;
+    height: 320px;
+}
+
+.about_bio {
+    grid-row: 2 / 3;
+    padding-left: 30px;
+}
+
+.about_bio p {
+    margin-bottom: 14px;
+}

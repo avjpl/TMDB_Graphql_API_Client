@@ -1,0 +1,25 @@
+{
+  "name": "movie_api_client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4101",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.3",
+    "@next/font": "13.1.1",
+    "classnames": "^2.3.2",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "graphql": "^16.6.0",
+    "gsap": "^3.11.4",
+    "next": "13.1.1",
+    "prettier": "^2.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1"
+  }
+}

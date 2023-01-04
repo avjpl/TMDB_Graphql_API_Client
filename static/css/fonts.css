@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'ClearSans';
+  src: url('../fonts/ClearSans/regular/ClearSans.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ClearSansItalic';
+  src: url('../fonts/ClearSans/italic/ClearSans.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'ClearSansLight';
+  src: url('../fonts/ClearSans/light/ClearSans.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'ClearSansBold';
+  src: url('../fonts/ClearSans/bold/ClearSans.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'effra';
+  src: url('../fonts/effra/regular/effra.eot');
+  src: url('../fonts/effra/regular/effra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/effra/regular/effra.woff') format('woff'),
+        url('../fonts/effra/regular/effra.ttf') format('truetype'),
+        url('../fonts/effra/regular/effra.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'effraLight';
+  src: url('../fonts/effra/light/effra.eot');
+  src: url('../fonts/effra/light/effra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/effra/light/effra.woff') format('woff'),
+        url('../fonts/effra/light/effra.ttf') format('truetype'),
+        url('../fonts/effra/light/effra.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'effraMedium';
+  src: url('../fonts/effra/medium/effra.eot');
+  src: url('../fonts/effra/medium/effra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/effra/medium/effra.woff') format('woff'),
+        url('../fonts/effra/medium/effra.ttf') format('truetype'),
+        url('../fonts/effra/medium/effra.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'effraHeavy';
+  src: url('../fonts/effra/heavy/effra.eot');
+  src: url('../fonts/effra/heavy/effra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/effra/heavy/effra.woff') format('woff'),
+        url('../fonts/effra/heavy/effra.ttf') format('truetype'),
+        url('../fonts/effra/heavy/effra.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../fonts/proximanova/regular/proximanova.eot');
+  src: url('../fonts/proximanova/regular/proximanova.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/proximanova/regular/proximanova.woff') format('woff'),
+        url('../fonts/proximanova/regular/proximanova.ttf') format('truetype'),
+        url('../fonts/proximanova/regular/proximanova.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'proximanovaLight';
+  src: url('../fonts/proximanova/light/proximanova.eot');
+  src: url('../fonts/proximanova/light/proximanova.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/proximanova/light/proximanova.woff') format('woff'),
+        url('../fonts/proximanova/light/proximanova.ttf') format('truetype'),
+        url('../fonts/proximanova/light/proximanova.svg#effraregular') format('svg');
+}
+
+@font-face {
+  font-family: 'proximanovaBold';
+  src: url('../fonts/proximanova/bold/proximanova.eot');
+  src: url('../fonts/proximanova/bold/proximanova.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/proximanova/bold/proximanova.woff') format('woff'),
+        url('../fonts/proximanova/bold/proximanova.ttf') format('truetype'),
+        url('../fonts/proximanova/bold/proximanova.svg#effraregular') format('svg');
+}

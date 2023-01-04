@@ -1,0 +1,50 @@
+/*
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    grid-auto-rows: 475px;
+    grid-gap: var(--space32);
+    padding: var(--space32);
+    background-color: var(--gray);
+}
+
+.gallery:hover img {
+    opacity: 0.7;
+}
+
+.gallery:hover img:hover {
+    opacity: 1;
+}
+
+.gallery__image {
+    object-fit: cover;
+    object-position: 65% 15%;
+}
+
+.gallery__image--wrapper {
+    position: relative;
+}
+*/
+
+.gallery > div img {
+    display: block;
+    margin-bottom: 1.25rem;
+}
+
+.gallery > div {
+    columns: 31em;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
+}
+
+.gallery > div > span {
+    margin-bottom: 1.25rem !important;
+}
+
+.gallery:hover img {
+    opacity: 0.7;
+}
+
+.gallery:hover img:hover {
+    opacity: 1;
+}

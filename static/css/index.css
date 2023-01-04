@@ -1,0 +1,40 @@
+@import './reset.css';
+@import './variables.css';
+@import './fonts.css';
+
+html,
+body,
+#__next {
+    height: 100%;
+    background-color: var(--black);
+}
+
+#__next {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: effra;
+    font-size: 12px;
+    letter-spacing: 2.3px;
+    color: var(--light-gray);
+}
+
+header,
+footer {
+    display: flex;
+    height: var(--space50);
+    margin: 0 var(--space50);
+}
+
+header nav,
+footer ul{
+    margin-left: auto;
+}
+
+main {
+    position: relative;
+    flex: 1 1 auto;
+    margin: 0 var(--space50);
+}

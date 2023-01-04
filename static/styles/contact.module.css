@@ -1,0 +1,20 @@
+.contact {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.contact__left--col {
+    grid-column: 1 / 2;
+}
+
+.contact__left--col > div:last-child {
+    margin-bottom: 0;
+}
+
+.contact__right--col {
+    grid-column: 2 / 3;
+}
