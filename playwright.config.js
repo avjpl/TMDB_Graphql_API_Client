@@ -9,6 +9,14 @@ const baseURL = `http://localhost:${PORT}`;
 
 // Reference: https://playwright.dev/docs/test-configuration
 const config = {
+  reporter: [
+    ['json', { outputFile: 'results.json' }],
+    ['html', {
+      open: 'never',
+      host: '0.0.0.0',
+      port: 9223,
+    }]
+  ],
   // Timeout per test
   timeout: 30 * 1000,
   // Test directory
