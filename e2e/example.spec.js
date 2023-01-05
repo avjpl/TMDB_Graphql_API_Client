@@ -8,10 +8,19 @@ test('Site title', async ({ page }) => {
 test('Site navigation', async ({ page }) => {
   await page.goto('http://localhost:4101/');
 
-  const expectedNavOptions = ['Home', 'Popular', 'Latest', 'Top Rated', 'Search'];
+  const expectedNavOptions = [
+    'Home',
+    'Popular',
+    'Latest',
+    'Top Rated',
+    'Search',
+  ];
 
-  for (const actualNavOption of await page.locator('nav').getByRole('listitem').all()) {
-    const option = (await actualNavOption.innerText());
+  for (const actualNavOption of await page
+    .locator('nav')
+    .getByRole('listitem')
+    .all()) {
+    const option = await actualNavOption.innerText();
     expect(expectedNavOptions.includes(option)).toBe(true);
   }
 });

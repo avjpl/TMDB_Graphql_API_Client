@@ -10,7 +10,7 @@ const links = {
   home: '/',
   popular: '/popular',
   latest: '/latest',
-  "top rated": '/topRated',
+  'top rated': '/topRated',
   search: '/search',
 };
 
