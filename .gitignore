@@ -21,6 +21,7 @@
 .idea/
 /lib/
 /tmp/
+/test-results/
 
 # debug
 npm-debug.log*

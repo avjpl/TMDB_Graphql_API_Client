@@ -10,7 +10,7 @@ const links = {
   home: '/',
   popular: '/popular',
   latest: '/latest',
-  topRated: '/topRated',
+  "top rated": '/topRated',
   search: '/search',
 };
 
@@ -43,15 +43,16 @@ const Layout = ({ children }) => {
         <nav>
           <ul className={css.nav}>
             {Object.entries(links).map(([linkLabel, linkTo]) => (
-              <Link
-                key={linkLabel}
-                href={linkTo}
-                className={classnames(css.nav__link, {
-                  [css['nav__link--active']]: currentRoute === linkTo,
-                })}
-              >
-                {linkLabel}
-              </Link>
+              <li key={linkLabel}>
+                <Link
+                  href={linkTo}
+                  className={classnames(css.nav__link, {
+                    [css['nav__link--active']]: currentRoute === linkTo,
+                  })}
+                >
+                  {linkLabel}
+                </Link>
+              </li>
             ))}
           </ul>
         </nav>
