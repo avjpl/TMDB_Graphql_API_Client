@@ -5,7 +5,7 @@ let apolloClient;
 
 function createApolloClient() {
   return new ApolloClient({
-    uri: 'http://localhost:4102',
+    uri: 'http://localhost:4000',
     cache: new InMemoryCache(),
   });
 }
