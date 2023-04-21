@@ -1,0 +1,15 @@
+.social {
+    display: flex;
+}
+
+.social__icon {
+    margin-right: var(--space4);
+}
+
+.social li:last-child a {
+    margin-right: var(--space10);
+}
+
+.social__link:hover {
+    color: var(--off-white);
+}

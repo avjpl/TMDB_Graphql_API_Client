@@ -1,0 +1,23 @@
+.button {
+    background: #46b5d1;
+    border-color: #46b5d1;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 16px;
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+    position: relative;
+    transition: 0.3s;
+}
+
+.button:hover {
+    border-color: #2d9bb7;
+    background: #2d9bb7;
+}
+
+.form:has(div) {
+    background-color: red;
+}

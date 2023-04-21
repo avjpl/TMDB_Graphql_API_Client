@@ -1,0 +1,77 @@
+.movie__container {
+    width: 100%;
+}
+
+.movie__image__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.movie__poster__container {
+    position: relative;
+    width: 260px;
+    height: 350px;
+}
+
+.movie__image__container > img {
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.movie__details {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    width: 50vw;
+    color: white;
+}
+
+.movie__title__container:has(h1) {
+    display: flex;
+    align-items: baseline;
+}
+
+.movie__title__container:has(h1) h1 {
+    margin-right: 10px;
+}
+
+.movie__title {
+    font-size: 1.4rem;
+}
+
+.movie__releaseDate {
+    margin-bottom: 20px;
+}
+
+.movie__overview__heading {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.movie__overview {
+    font-size: 0.9rem;
+}
+
+.movie__user__actions {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.movie__favourite > svg {
+    fill: #cdc532;
+    width: 17px;
+    height: 17px;
+}
