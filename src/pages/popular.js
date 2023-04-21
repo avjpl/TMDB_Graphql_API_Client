@@ -34,25 +34,30 @@ const Popular = () => {
         {data?.popular?.results?.map((movie) => {
           return (
             <li className={styles.grid__item} key={movie.id}>
-                <Link href={`movie/${movie.id}`}>
-                  <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-                    <Image
-                      priority={true}
-                      src={movie.poster_url}
-                      fill
-                      sizes='
+              <Link href={`movie/${movie.id}`}>
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    position: 'relative',
+                  }}
+                >
+                  <Image
+                    priority={true}
+                    src={movie.poster_url}
+                    fill
+                    sizes='
                       (max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
                       33vw
                     '
-                      alt=''
-                    />
-                  </div>
-                  <span className={styles.vote__average}>
-                    {movie.vote_average}
-                  </span>
-                </Link>
-
+                    alt=''
+                  />
+                </div>
+                <span className={styles.vote__average}>
+                  {movie.vote_average}
+                </span>
+              </Link>
             </li>
           );
         })}

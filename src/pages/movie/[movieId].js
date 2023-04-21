@@ -44,10 +44,16 @@ const Movie = () => {
   return (
     <div className={styles.movie__container}>
       <div className={styles.movie__image__container}>
-        <Image src={details.backdrop_url} fill alt='' priority={true} objectFit="cover" />
+        <Image
+          src={details.backdrop_url}
+          fill
+          alt=''
+          priority={true}
+          objectFit='cover'
+        />
 
         <div className={styles.movie__details}>
-          <div  className={styles.movie__poster__container}>
+          <div className={styles.movie__poster__container}>
             <div style={{ height: '100%', position: 'relative' }}>
               <Image src={details.poster_url} fill alt='' priority={true} />
             </div>
