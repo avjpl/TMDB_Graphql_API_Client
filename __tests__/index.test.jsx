@@ -1,7 +1,7 @@
 import { render, screen, waitFor, userEvent, within } from 'test-utils';
 
 import Index from '../src/pages/index';
-import {singleMovie} from "./mocks/queries/popular";
+import {singleMovie} from './mocks/queries/popular';
 
 describe('Index', () => {
   let mocks;
@@ -26,7 +26,7 @@ describe('Index', () => {
     });
   });
 
-  it('Should display vote average on hover', async () => {
+  it('Should display movie average on hover', async () => {
     mocks.push(singleMovie);
 
     render(<Index />, { mocks });
@@ -43,4 +43,4 @@ describe('Index', () => {
       expect(screen.getByText('3.1')).toBeInTheDocument();
     });
   });
-})
+});
