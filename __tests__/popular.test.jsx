@@ -26,7 +26,7 @@ describe('Popular', () => {
     });
   });
 
-  it('Should display vote average on hover', async () => {
+  it('Should display movie average on hover', async () => {
     mocks.push(singleMovie);
 
     render(<Popular />, { mocks });
