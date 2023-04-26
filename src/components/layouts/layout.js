@@ -1,33 +1,29 @@
-import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import classnames from 'classnames';
+import { useLazyQuery } from '@apollo/client';
 
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
-import css from './layout.module.css';
-
-const links = {
-  home: '/',
-  popular: '/popular',
-  latest: '/latest',
-  'top rated': '/topRated',
-  search: '/search',
-};
-
-const socialLink = {
-  twitter: (username) => ({
-    link: `https://twitter.com/${username}`,
-    icon: <FaTwitter />,
-  }),
-  instagram: (username) => ({
-    link: `https://www.instagram.com/${username}`,
-    icon: <FaInstagram />,
-  }),
-};
+import { Header, Footer } from '../';
+import { MY_FAVOURITES } from '../../apollo/queries';
+import { myFavourites, isLoggedInVar } from '../../apollo/cache';
 
 const Layout = ({ children }) => {
-  const router = useRouter();
-  const currentRoute = router.pathname;
+  const [loadFavourites, { error, loading }] = useLazyQuery(MY_FAVOURITES, {
+    onCompleted({ me }) {
+      myFavourites(me);
+    },
+  });
+
+  useEffect(() => {
+    if (isLoggedInVar()) {
+      loadFavourites();
+    }
+  }, [loadFavourites]);
+
+  if (loading) return <p>Loading</p>;
+  if (error) {
+    console.error(error);
+    return <p>An error occurred</p>;
+  }
 
   return (
     <>
@@ -35,47 +31,11 @@ const Layout = ({ children }) => {
         <title>Movies</title>
       </Head>
 
-      <header>
-        <Link href='/' className={css.title}>
-          Movies
-        </Link>
-
-        <nav>
-          <ul className={css.nav}>
-            {Object.entries(links).map(([linkLabel, linkTo]) => (
-              <li key={linkLabel}>
-                <Link
-                  href={linkTo}
-                  className={classnames(css.nav__link, {
-                    [css['nav__link--active']]: currentRoute === linkTo,
-                  })}
-                >
-                  {linkLabel}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main>{children}</main>
 
-      <footer>
-        <ul className={css.social}>
-          {Object.entries(socialLink).map(([soicalLabel, fn]) => {
-            const data = fn('avjpl');
-
-            return (
-              <li key={soicalLabel}>
-                <a className={css.social__link} href={data.link}>
-                  <span className={css.social__icon}>{data.icon}</span>{' '}
-                  {soicalLabel}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </footer>
+      <Footer />
     </>
   );
 };

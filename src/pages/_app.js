@@ -9,11 +9,11 @@ function App({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState);
 
   return (
-    <Layout>
-      <ApolloProvider client={apolloClient}>
+    <ApolloProvider client={apolloClient}>
+      <Layout>
         <Component {...pageProps} />
-      </ApolloProvider>
-    </Layout>
+      </Layout>
+    </ApolloProvider>
   );
 }
 

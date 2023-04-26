@@ -1,0 +1,11 @@
+.form__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}

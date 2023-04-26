@@ -1,0 +1,8 @@
+.form__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    width: 150px;
+    align-self: end;
+}
