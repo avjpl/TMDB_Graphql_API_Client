@@ -1,4 +1,3 @@
-import { Children, cloneElement } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 
 import {
@@ -23,11 +22,8 @@ const Form = ({ children, ...formActions }) => {
     <div className={styles.form__container}>
       <FormProvider {...rest}>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <>
-            {Children.map(children, (child) => {
-              return cloneElement(child, {});
-            })}
-          </>
+          {/* In order to pass any addition prop to children context can be used to define extra prop; variable or functions */}
+          {children}
         </form>
       </FormProvider>
     </div>

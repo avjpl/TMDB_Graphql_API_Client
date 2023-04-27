@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import fetch from 'cross-fetch';
 import { ApolloClient, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
@@ -12,6 +13,7 @@ const httpLink = createHttpLink({
     process.env.NODE_ENV !== 'production'
       ? 'http://localhost:4000'
       : process.env.NEXT_PUBLIC_GQL_SERVER,
+  fetch,
 });
 
 function createApolloClient() {

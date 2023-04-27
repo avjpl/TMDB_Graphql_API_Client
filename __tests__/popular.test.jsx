@@ -1,9 +1,9 @@
 import { render, screen, waitFor, userEvent, within } from 'test-utils';
 
-import Index from '../src/pages/index';
-import {singleMovie} from './mocks/queries/popular';
+import Popular from '../src/pages/popular';
+import { singleMovie } from './mocks/queries/popular';
 
-describe('Index', () => {
+describe('Popular', () => {
   let mocks;
 
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe('Index', () => {
   });
 
   it('renders a heading', async () => {
-    render(<Index />, { mocks: [] });
+    render(<Popular />, { mocks: [] });
 
     expect(await screen.findByText('Loading...')).toBeInTheDocument();
   });
@@ -19,7 +19,7 @@ describe('Index', () => {
   it('Should render expect movie data', async () => {
     mocks.push(singleMovie);
 
-    render(<Index />, { mocks });
+    render(<Popular />, { mocks });
 
     await waitFor(() => {
       expect(within(screen.getByTestId('movie-listing')).getAllByRole('listitem')).toHaveLength(1);
@@ -29,7 +29,7 @@ describe('Index', () => {
   it('Should display movie average on hover', async () => {
     mocks.push(singleMovie);
 
-    render(<Index />, { mocks });
+    render(<Popular />, { mocks });
 
     await waitFor(() => {
       expect(within(screen.getByTestId('movie-listing')).getAllByRole('listitem')).toHaveLength(1);

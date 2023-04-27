@@ -1,6 +1,6 @@
-name: tests
+name: unit tests
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+#run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on: [push]
 
@@ -20,15 +20,15 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Run unit test
+      - name: Unit tests
         run: yarn test:ci
 
 #      - name: Install Playwright Browsers
 #        run: npx playwright install --with-deps
-
+#
 #      - name: Run Playwright tests
 #        run: npx playwright test
-
+#
 #      - uses: actions/upload-artifact@v3
 #        if: always()
 #        with:
